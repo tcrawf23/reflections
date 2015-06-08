@@ -19,3 +19,17 @@ because it does not necessarily need to include every file from the folder,
 only the ones the user wants to add to the commit. This is also different from 
 the repository, because it only contains the information of everything that 
 could be committed, but has not necessarily yet.
+
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+Before adding any files to the staging area, you can make sure you have one 
+logical change by using 'git diff', which will display the differences between 
+the files in the working directory and the files in the staging area, which 
+are currently copies of the files from the latest commit. If there is only one 
+logical change, then you can add the files to the staging area, and to double 
+check, you can type 'git diff --staged' to see the differences between the 
+files in the staging area and the files from the latest commit. Then you can 
+use 'git commit' and type in a message describing the logical change to commit 
+the files.
