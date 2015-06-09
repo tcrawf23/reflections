@@ -33,3 +33,54 @@ check, you can type 'git diff --staged' to see the differences between the
 files in the staging area and the files from the latest commit. Then you can 
 use 'git commit' and type in a message describing the logical change to commit 
 the files.
+
+
+
+What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
+
+Branches are particularly useful when trying to implement experimental changes 
+to your working code. They are helpful, because they allow the user to work on 
+those experimental changes without affecting the original working code, in 
+case something goes wrong. Once the user gets the experimental code working, 
+they can simply merge the two branches together to incorporate the new feature 
+into the master branch.
+
+
+
+How do the diagrams help you visualize the branch structure?
+
+The diagrams help visualize the branch structure by showing where each branch 
+'branches off' using a linked list graph. By following the path from the head 
+of each branch to the initial commit, we can see the entire git log of each 
+branch. We can see where the branches shared the last commit, and we can see 
+which commits are reachable (or implemented) in each branch. This is also 
+helpful, because it helps us understand why we get the 'detached HEAD' warning 
+message when we checkout a previous commit.
+
+
+
+What is the result of merging two branches together? Why do we represent it in 
+the diagram the way we do?
+
+The result of merging two branches together is the combined changes from both 
+branches. This is usually performed when an experimental change on a separate 
+branch from 'master' is completed, and is incorporated into the working 
+version of the code. It is represented as the newest commit pointing to both 
+previous commits from the two merged branches, because both commits are the 
+parents of the newest commit.
+
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges 
+manually?
+
+Git attempts to automatically merge two commits together, which can save quite 
+a bit of time and make the merging process much less tedious. However, if Git 
+were to attempt to automatically merge in every scenario, this could lead to 
+broken code. This is because there are frequently merge conflicts, in which 
+two similar areas of code are modified from the original version. In this 
+case, Git doesn't know which version to choose, or whether the two changes 
+should be combined together, so it leaves it to the user to manually merge the 
+code. Althought this can sometimes be painfully obvious, this helps ensure 
+that the merge creates working code.
