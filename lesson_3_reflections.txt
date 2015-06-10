@@ -1,3 +1,18 @@
-When would you want to use a remote repository rather than keeping all your work local?
+When would you want to use a remote repository rather than keeping all your 
+work local?
 
-Keeping all of your work local can be practical when working on a solo project from the same computer, but it can become difficult when working on a project with a team, or when working on multiple different computers. In these scenarios, it would make more sense to use a remote repository.
+Keeping all of your work local can be practical when working on a solo project 
+from the same computer, but it can become difficult when working on a project 
+with a team, or when working on multiple different computers. In these 
+scenarios, it would make more sense to use a remote repository.
+
+
+
+Why might you want to always pull changes manually rather than having Git 
+automatically stay up-to-date with your remote repository?
+
+Because the remote repository is the combined code of a team, you might not 
+always want to automatically pull changes into your local repository, 
+especially when you are working on changes yourself. This might conflict with 
+your changes, and until you have finished the portion of the code, you might 
+not want the new changes to be incorporated yet.
