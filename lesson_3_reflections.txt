@@ -16,3 +16,64 @@ always want to automatically pull changes into your local repository,
 especially when you are working on changes yourself. This might conflict with 
 your changes, and until you have finished the portion of the code, you might 
 not want the new changes to be incorporated yet.
+
+
+
+Describe the differences between forks, clones, and branches. When would you 
+use one instead of another?
+
+Although forks, clones, and branches are all similar actions, they have their 
+differences, and are used in different situations. Branching occurs when a 
+user wants to make an experimental change to their working code, so they 
+branch a commit to ensure that it does not modify the original commit. Cloning 
+occurs when a user wants to either copy a remote repository to their local 
+computer, or a local repository to another location on their computer. Forking 
+is very similar to cloning, but it only occurs when a user wants to copy a 
+remote repository on GitHub to their personal account, usually because they 
+don't have access to push changes. This is different from cloning, because it 
+still gives credit to the original programmer, and the programmer can see how 
+many people have forked their repository.
+
+
+
+What is the benefit of having a copy of the last known state of the remote 
+stored locally?
+
+Locally storing the last known state of the remote repository is helpful, 
+because it makes pushes and pulls much more simple. Instead of either pushing 
+or pulling the entire log history, by storing the last known state locally, 
+Git knows how many commits have occured since the last sync, and can 
+appropriately push or pull only the new commits. This is especially useful 
+when it comes to fetches, because the new commits will branch directly from 
+the copy of the last known state of the remote repository.
+
+
+
+How would you collaborate without using Git or GitHub? What would be easier, 
+and what would be harder?
+
+I have done three group projects in college, and I didn't use Git or GitHub 
+for any of them. Instead, we constantly zipped up our code, and put it on a 
+shared Google Drive folder. Then, the other members would download our code, 
+and manually incorporate it into their versions of the code. This resulted in 
+much more frustration than was necessary, especially while working with Unity, 
+which didn't allow simple drag and drop changes. This was much harder, but we 
+continued to use it because it was very intuitive, rather than learning how to 
+use Git and GitHub at the time.
+
+
+
+When would you want to make changes in a separate branch rather than directly 
+in master? What benefits does each approach have?
+
+Although there are a few more steps involved when making changes to a separate 
+branch, then merging them into the master branch (versus simply working 
+directly with the master branch), it is the normal practice. This is because 
+the master branch is typically the working 'production' branch, so new changes 
+shouldn't be added to the branch unless they are definitely working. Instead, 
+when programmers want to make experimental changes, they do so do a separate 
+branch, then once they get the new feature working, they merge the current 
+master branch into the separate branch (versus the other way around) to once 
+again ensure everything is working. Then once everyone signs off, the pull 
+request can happen, and the separate branch can merge into the master branch 
+on GitHub.
